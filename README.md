@@ -1,11 +1,11 @@
 
+### Description
 
+A Springboot microservices application which allows users to create a quiz based ion multiple categories where questions will be provided by question-service, participate in a live quiz using quiz-service. This application demonstrates working of Eureka service discovery server, Spring cloud api gateway and openfeign to make declarative rest api calls from one microservice to another. 
 
-
-
-
-
-3. Setting Up Eureka Server Microservice & other microservice to register to eureka.
+1. Create question-service microservice
+2. Create quiz-service microservice
+3. Setting Up Eureka Server `service-registry` Microservice & other microservice to register to eureka. <br>
    3.1 Create a new project with the following dependencies
    ```
    <dependency>
@@ -33,7 +33,7 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
    ```
-4. Setting up Question-service as feign client in Quiz-service to make declaratve rest api calls (quiz->question)
+4. Setting up Question-service as feign client in Quiz-service to make declaratve rest api calls (quiz->question) <br>
    4.1 Add dependency to pom.xml of Quiz-service
    ```
    <dependency>
@@ -65,7 +65,7 @@
    ```
    4.4 Sample API call `List<Integer> qustions = quizInterface.getQuestionsForQuiz(category,numQ).getBody();`
 
-5. Setting up APT-GATEWAY microservice for the application
+5. Setting up `api-gateway` microservice for the application <br>
    5.1 Create a new project api-gateway with following dependencies
    ```
    <dependency>
