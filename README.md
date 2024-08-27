@@ -1,7 +1,7 @@
 
 ### Description
 
-A Springboot microservices application which allows users to create a quiz based ion multiple categories where questions will be provided by question-service, participate in a live quiz using quiz-service. This application demonstrates working of Eureka service discovery server, Spring cloud api gateway and openfeign to make declarative rest api calls from one microservice to another. 
+A Springboot microservices application which allows users to create a quiz based on multiple categories where questions will be provided by question-service, participate in a live quiz using quiz-service. This application demonstrates working of Eureka service discovery server, Spring cloud api gateway and openfeign to make declarative rest api calls from one microservice to another. 
 
 1. Create question-service microservice
 2. Create quiz-service microservice
