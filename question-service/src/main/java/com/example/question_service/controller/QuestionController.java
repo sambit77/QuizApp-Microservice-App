@@ -10,8 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-//http://localhost:8080/question/allQuestions
-//
+
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
@@ -39,7 +38,6 @@ public class QuestionController {
         return questionService.addQuestion(question);
     }
 
-    // generate
 
     @GetMapping("/generate")
     public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String category,
@@ -47,16 +45,14 @@ public class QuestionController {
     {
         return questionService.getQuestionsForQuiz(category,numQuestions);
     }
-    // getQuestions(questionId)
-    //http://localhost:8080/question/getQuestions
+
     @PostMapping("/getQuestions")
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds)
     {
         System.out.println( "Port is " + environment.getProperty("local.server.port"));
         return  questionService.getQuestionsFromId(questionIds);
     }
-    // getScore
-    //http://localhost:8080/question/getScore
+
     @PostMapping("getScore")
     public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses)
     {
