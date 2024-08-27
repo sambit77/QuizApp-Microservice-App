@@ -4,7 +4,13 @@
 A Springboot microservices application which allows users to create a quiz based on multiple categories where questions will be provided by question-service, participate in a live quiz using quiz-service. This application demonstrates working of Eureka service discovery server, Spring cloud api gateway and openfeign to make declarative rest api calls from one microservice to another. 
 
 ![QuizApp Microservices Architecture](/Architecture.jpg) 
+#### Steps to run:- 
+(Use Java 17 or Higher & Spring Boot 3.3 or Higher)
+1. Ensure Docker is running
+2. Trigger postgresDB instance in docker using question-service/docker-compose/deployment/infra.yml
+3. Run service-registry (Eureka) -> question-service -> quiz-service -> api-gateway microservices in sequence
 
+#### Dev Setup in brief: 
 1. Create question-service microservice
 2. Create quiz-service microservice
 3. Setting Up Eureka Server `service-registry` Microservice & other microservice to register to eureka. <br>
